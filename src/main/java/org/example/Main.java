@@ -28,16 +28,14 @@ public class Main {
         Person[] people = new Person[5];
         final int b = 10;
         Random random = new Random();
-        for (Person person : people) {
+        for (var personIndex = 0; personIndex < people.length; personIndex++) {
             try {
-                person = new Person("John Doe", 10 + random.nextInt(5,20) * 7);
-                String ageResult = String.valueOf(MathUtils.add(person.getAge(),b));
+                people[personIndex] = new Person("John Doe", 10 + random.nextInt(5,20) * 7);
+                String ageResult = String.valueOf(MathUtils.add(people[personIndex].getAge(),b));
                 emailMessenger.sendMessage(ageResult);
             } catch (Exception ex) {
                 System.out.println(ex);
             }
-
         }
-
     }
 }
