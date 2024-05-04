@@ -2,6 +2,7 @@ package org.example;
 
 import company.beans.Person;
 import company.implementations.EmailMessenger;
+import company.utils.MathUtils;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,6 +19,8 @@ public class Main {
         }
 
         EmailMessenger emailMessenger = new EmailMessenger();
-        emailMessenger.sendMessage("Message");
+
+        String mathResult = String.valueOf(MathUtils.add(2, 2));
+        emailMessenger.sendMessage(mathResult);
     }
 }
