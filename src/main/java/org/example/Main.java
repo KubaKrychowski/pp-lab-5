@@ -1,6 +1,7 @@
 package org.example;
 
 import company.beans.Person;
+import company.implementations.EmailMessenger;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,5 +17,7 @@ public class Main {
             System.out.println(ex);
         }
 
+        EmailMessenger emailMessenger = new EmailMessenger();
+        emailMessenger.sendMessage("Message");
     }
 }
